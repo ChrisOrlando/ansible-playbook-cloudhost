@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe package('MariaDB-server') do
-  it { should be_installed.with_version('11.4') }
+  it { should be_installed.with_version('12.3') }
 end
 
 describe package('MariaDB-client') do

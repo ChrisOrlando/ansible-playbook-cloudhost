@@ -73,7 +73,7 @@ playbooks/
   group_vars/                # see Variables
   os_vars/
     CentOS-7.yml             # iworx 6 archive repo, custom theme, php56 base symlink
-    Rocky-9.yml              # iworx 8 installer, MariaDB 11.4, PHP 8.1, no custom theme
+    Rocky-9.yml              # iworx 8 installer, MariaDB 12.3, PHP 8.1, no custom theme
   scripts/
     cloudhost-init.sh.j2     # the entire prebuilt-image path; destructive (rewrites fstab, repartitions swap, rotates every iworx DB password)
   tasks/                     # all.yml/cloudhost.yml/import.yml/install-app.yml are the four included twice per play (see Conventions)
@@ -94,7 +94,7 @@ spec/                        # serverspec suite — see TESTS.md
   spec_helper.rb             # serverspec exec backend (runs inside the container)
   vars.yml                   # placeholder iworx creds + post_run_reboot: false (its firewall/SSL/sysctl keys are inert in CI)
   centos7/                   # *_spec.rb: MariaDB 10.6, php56/70/71, iworx, httpd
-  rocky9/                    # *_spec.rb: MariaDB 11.4, iworx, httpd (no php spec)
+  rocky9/                    # *_spec.rb: MariaDB 12.3, iworx, httpd (no php spec)
 ref/
   variables.md               # the seven variable sources, their precedence, and which paths load them
   ci.md                      # every way CI diverges from production, + container workarounds
